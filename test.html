@@ -5,33 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function showBG{
+        
+        function showbg(){
             
-            // document.getElementById('bgdiv1').style= "background-image: url('dog.gif')" ;
-            // document.getElementById('bgdiv1').style.backgroundPosition= 'center';
+            
 
         }
-
-        function hideBG{
-            document.getElementById('bgdiv1').style = 'style="background-image: url(img/dog.gif)"';
-            document.getElementById('bgdiv1').style.backgroundPosition= null;
+        
+        function displayDate() {
+            document.getElementById("demo").innerHTML = 'This is some random text. You look great!';
         }
     </script>
 
-    <style>
-        div {
-   /* Background pattern from Toptal Subtle Patterns */
-   background-image: url(img/bg.png);
-   height: 400px;
-   width: 50%;
-}
-    </style>
 </head>
 
 
 <body>
-    <div id="bgdiv1" >
-        <button type="button" onclick='{ document.getElementById("bgdiv1").style.backgroundImage="url(img/dog.gif)"; document.getElementById("bgdiv1").style.backgroundRepeat="no-repeat";  document.getElementById("bgdiv1").style.backgroundPosition= "center" }'> Hover Over Me</button>
-    </div>
+
+<button onclick="displayDate()">The time is?</button>
+
+
+<p id="demo"></p>
+
 </body>
 </html>

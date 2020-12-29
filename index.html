@@ -16,22 +16,18 @@
         x = 5;
         y = 3; z = x + y; // multiple statements in on line are allowed
         name = "Jai"
-        
-        function showBG{
-            document.getElementById('bgdiv1').style.backgroundImage= url(/img/dog.gif);
-            document.getElementById('bgdiv1').style.backgroundPosition= 'center';
+
+        function showBG(){
+            document.getElementById("bgdiv1").style.backgroundImage="url(img/dog.gif)";
+            document.getElementById("bgdiv1").style.backgroundRepeat="no-repeat";
+            document.getElementById("bgdiv1").style.backgroundPosition= "center";
 
         }
-
-        function hideBG{
-            document.getElementById('bgdiv1').style.backgroundImage= null;
-            document.getElementById('bgdiv1').style.backgroundPosition= null;
+        function hideBG(){
+            document.getElementById("bgdiv1").style.backgroundImage= null ;
         }
-        // JQuery not understood yet.
         
-        $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip();
-        });
+        
 
 
         
@@ -89,6 +85,9 @@
             font-size: 20px;
         }
     </style>
+
+
+
 </head>
 
 
@@ -125,7 +124,8 @@
                 <p id="date1"></p>
             </div>
             <div class="col-sm-4" id="bgdiv1" style="height: 300px;">
-                <button type="button" class="btn mybtn2" onmouseover='{ document.getElementById("bgdiv1").style.backgroundImage="url(img/dog.gif)"; document.getElementById("bgdiv1").style.backgroundRepeat="no-repeat";  document.getElementById("bgdiv1").style.backgroundPosition= "center" }' onmouseout='{ document.getElementById("bgdiv1").style.backgroundImage= null }' >Hover Over Me</button>
+                
+                <button type="button" class="btn mybtn2" onmouseover='showBG()' onmouseout='hideBG()' >Hover Over Me</button>
                 
             </div>
             <div class="col-sm-4" style="height: 300px;">
